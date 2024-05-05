@@ -22,6 +22,11 @@ require('lazy').setup({
     },
 
     {
+        'nvim-lualine/lualine.nvim',
+        'archibate/lualine-time',
+    },
+
+    {
         "nvim-telescope/telescope.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim"
@@ -153,3 +158,32 @@ cmp.setup {
     }
 }
 print("Loaded settings")
+
+-- ===========
+-- LUALINE-TIME
+-- ===========
+require'lualine'.setup {
+    options = {
+        theme = 'ayu_mirage',
+    },
+    sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename'},
+        lualine_x = {'ctime'},
+        lualine_y = {'progress'},
+        lualine_z = {'location'},
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {'filename'},
+        lualine_x = {'location'},
+        lualine_y = {},
+        lualine_z = {},
+    },
+    tabline = {},
+    winbar = {},
+    inactive_winbar = {},
+    extensions = {}
+}
