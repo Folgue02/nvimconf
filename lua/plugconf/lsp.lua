@@ -11,3 +11,9 @@ lspconfig.jdtls.setup {}
 lspconfig.ols.setup {}
 lspconfig.gopls.setup {}
 lspconfig.tsserver.setup {}
+--lspconfig.perlls.setup {}
+--lspconfig.perlnavigator.setup {}
+lspconfig.perlpls.setup {}
+lspconfig.nimls.setup {}
+lspconfig.bashls.setup {}
+

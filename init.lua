@@ -37,8 +37,10 @@ require('lazy').setup({
 
     {
         "nyoom-engineering/nyoom.nvim",
+        "Mofiqul/vscode.nvim",
         config = function()
-            vim.cmd [[ colorscheme lunaperche ]]
+            --vim.cmd [[ colorscheme lunaperche ]]
+            vim.cmd [[ colorscheme vscode ]]
         end
     },
 
@@ -58,7 +60,10 @@ require('lazy').setup({
     -- Language specific stuff
     "rust-lang/rust.vim",
     "Tetralux/odin.vim",
-    "vim-crystal/vim-crystal"
+    "vim-crystal/vim-crystal",
+    "alaviss/nim.nvim",
+    "jidn/vim-dbml",
+    "rhaiscript/vim-rhai"
 })
 
 -- TODO: Fix keymapping not working.
@@ -162,7 +167,7 @@ print("Loaded settings")
 -- ===========
 -- LUALINE-TIME
 -- ===========
-require'lualine'.setup {
+require('lualine').setup {
     options = {
         theme = 'ayu_mirage',
     },
